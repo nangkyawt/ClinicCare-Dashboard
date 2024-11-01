@@ -1,0 +1,152 @@
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #133E87;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    transition: width 0.3s ease, padding-top 0.3s ease;
+  }
+  
+  .sidebar-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.4;
+    border-bottom: 1px solid #ffffff; 
+    padding-bottom: 10px;
+    padding-left: 20px; 
+  }
+  
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  .sidebar-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex; 
+    align-items: center;
+    padding: 8px 10px;
+    transition: background-color 0.3s, padding-left 0.3s;
+    border-radius: 4px;
+  }
+  
+  .sidebar-list a:hover {
+    background-color: #1662CC;
+    padding-left: 20px; 
+  }
+  
+  .sidebar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .sidebar-list a:hover .sidebar-icon {
+    transform: scale(1.1);
+  }
+  
+ 
+  .topbar {
+    width: calc(100% - 250px); 
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+  
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 8px 12px;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1em;
+    color: #333;
+    margin-right: 8px;
+    width: 200px;
+  }
+  
+  .search-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 60px;
+      padding-top: 20px;
+    }
+  
+    .sidebar-title, .username {
+      display: none; 
+    }
+  
+    .sidebar-list li,
+    .sidebar-list a {
+      justify-content: center;
+      padding-left: 0;
+    }
+  
+    .sidebar-list a:hover {
+      padding-left: 0;
+      background-color: #e36565;
+    }
+  
+    .topbar {
+      width: 100%;
+      left: 0;
+    }
+  
+    .search-input {
+      width: 120px;
+    }
+  }
+  
