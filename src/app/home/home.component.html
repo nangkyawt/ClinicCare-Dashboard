@@ -1,99 +1,13 @@
 <div class="main-layout">
-  <div class="sidebar">
-    <h1 class="sidebar-title">Dr.Kaung Khant Zaw</h1>
-    <ul class="sidebar-list">
-      <li>
-        <img
-          src="../../assets/images/dashboard.png"
-          alt="Dashboard Icon"
-          class="sidebar-icon"
-        />
-        <a routerLink="/dashboard">Dashboard</a>
-      </li>
-      <li>
-        <img
-          src="../../assets/images/stethoscope.png"
-          alt="Appointments Icon"
-          class="sidebar-icon"
-        />
-        <a routerLink="/appoitments">Appointments</a>
-      </li>
-      <li>
-        <img
-          src="../../assets/images/doctor.png"
-          alt="Doctors Icon"
-          class="sidebar-icon"
-        />
-        <a routerLink="/doctors">Doctors</a>
-      </li>
-      <li>
-        <img
-          src="../../assets/images/hierarchy.png"
-          alt="Departments Icon"
-          class="sidebar-icon"
-        />
-        <a routerLink="/departments">Departments</a>
-      </li>
-      <li>
-        <img
-          src="../../assets/images/patient.png"
-          alt="Patients Icon"
-          class="sidebar-icon"
-        />
-        <a routerLink="/patients">Patients</a>
-      </li>
-      <li>
-        <img
-          src="../../assets/images/transaction.png"
-          alt="Payments Icon"
-          class="sidebar-icon"
-        />
-        <a routerLink="/payments">Payments</a>
-      </li>
-      <li>
-        <img
-          src="../../assets/images/settings.png"
-          alt="Setting Icon"
-          class="sidebar-icon"
-        />
-        <a routerLink="/setting">Setting</a>
-      </li>
-      <li>
-        <img
-          src="../../assets/images/help.png"
-          alt="Help Icon"
-          class="sidebar-icon"
-        />
-        <a routerLink="/help">Help</a>
-      </li>
-    </ul>
-  </div>
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
 
+  <!-- Main Content Area -->
   <div class="content">
-    <div class="topbar">
-      <div class="search-container">
-        <input type="text" placeholder="Search..." class="search-input" />
-        <img
-          src="../../assets/images/search.png"
-          alt="Search Icon"
-          class="search-icon"
-        />
-      </div>
-      <div class="user-profile">
-        <img
-          src="../../assets/images/bell.png"
-          alt="noti Icon"
-          class="sidebar-icon"
-        />
-        <img
-          src="../../assets/images/user.png"
-          alt="User Profile"
-          class="profile-icon"
-        />
-        <span class="username">Admin</span>
-      </div>
-    </div>
+    <!-- Topbar -->
+    <app-topbar></app-topbar>
 
+    <!-- Card Container -->
     <div class="card-container">
       <div class="card">
         <div class="card-content">
@@ -111,7 +25,7 @@
           <h4>23</h4>
           <img
             src="../../assets/images/patient.png"
-            alt="Reports Icon"
+            alt="New Patients Icon"
             class="icon"
           />
         </div>

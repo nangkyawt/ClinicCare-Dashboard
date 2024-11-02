@@ -1,0 +1,36 @@
+
+.table-container {
+    margin: 20px auto;
+    max-width: 90%;
+  }
+  
+
+  .table th {
+    background-color: #0056b3;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px; 
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+  .table td, .table th {
+    vertical-align: middle;
+    padding: 10px; 
+    font-family: 'Poppins', sans-serif;
+  }
+  
+ 
+  .table tbody tr:hover {
+    background-color: #e9f3ff; 
+  }
+  
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa; 
+  }
+  
+  .table thead th {
+    border-bottom: 2px solid #dee2e6;
+  }
+  
