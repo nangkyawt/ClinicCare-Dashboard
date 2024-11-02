@@ -1,23 +1,30 @@
+.main-layout {
+    display: flex;
+  }
 
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #133E87;
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding-top: 60px;
-    transition: width 0.3s ease, padding-top 0.3s ease;
-  }
+  width: 250px;
+  height: 100vh;
+  background-color: #133E87;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 7px;
+  padding-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
   
   .sidebar-title {
-    font-size: 1.5em;
-    font-weight: 600;
+    font-size: 1.3em;
+    font-weight: 100;
     line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
     border-bottom: 1px solid #ffffff; 
-    padding-bottom: 10px;
+    /* padding-bottom: 5px; */
     padding-left: 20px; 
+    /* margin-bottom: 60px; */
   }
   
   .sidebar-list {
@@ -61,19 +68,19 @@
   
  
   .topbar {
-    width: calc(100% - 250px); 
     height: 60px;
     background-color: #ffffff;
     display: flex;
+    font-family: 'Poppins', sans-serif;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     position: fixed;
     top: 0;
     left: 250px;
+    width: calc(100% - 250px);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    transition: left 0.3s ease;
   }
   
 
@@ -119,10 +126,68 @@
   }
   
   
+  
+  .content {
+    margin-left: 250px; 
+    padding-top: 60px; 
+    width: calc(100% - 250px);
+  }
+  
+  .card-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+
+  .card {
+    width: 200px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15), 
+    0px 4px 8px rgba(0, 0, 0, 0.10); 
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #133E87, #3b6db3);
+    transition: transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  
+  .card h4 {
+    margin-right: 5px;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  
+  .card img.icon {
+    width: 32px; 
+    height: 32px;
+  }
+  
+  .card p {
+    color: #e0e0e0;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .card:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25), 
+    0px 6px 12px rgba(0, 0, 0, 0.15); 
+transform: translateY(-5px); 
+  }
+  
+  /* Responsive Sidebar Collapse */
   @media (max-width: 768px) {
     .sidebar {
       width: 60px;
-      padding-top: 20px;
     }
   
     .sidebar-title, .username {
@@ -137,7 +202,7 @@
   
     .sidebar-list a:hover {
       padding-left: 0;
-      background-color: #e36565;
+      background-color: #1662CC;
     }
   
     .topbar {
@@ -145,8 +210,12 @@
       left: 0;
     }
   
+    .content {
+      margin-left: 60px;
+      width: calc(100% - 60px);
+    }
+  
     .search-input {
       width: 120px;
     }
   }
-  
