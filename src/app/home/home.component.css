@@ -1,45 +1,47 @@
 .main-layout {
-    display: flex; /* Aligns sidebar and content side by side */
+    display: flex; 
 }
 
 .content {
     flex-grow: 1;
-    margin-left: 100px; /* Leaves space for the sidebar */
-    padding-top: 1px; /* Space for the fixed top bar */
-    width: calc(100% - 250px); /* Adjusts width based on sidebar */
+    margin-left: 100px; 
+    padding-top: 1px; 
+    width: calc(100% - 250px);
     display: flex;
     flex-direction: column;
 }
 
+  
 .topbar {
-    height: 60px; /* Fixed height for top bar */
+    height: 60px;
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    position: fixed; /* Fixed position to stay at the top */
+    position: fixed; 
     top: 0;
-    left: 250px; /* Aligns with the sidebar */
-    width: calc(100% - 250px); /* Takes full width minus sidebar */
+    left: 250px; 
+    width: calc(100% - 250px); 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
-    z-index: 1000; /* Ensures it's above other elements */
+    z-index: 1000;
 }
 
 .card-container {
     display: flex;
-    gap: 20px; /* Spacing between cards */
-    padding: 2px; /* Padding inside the container */
-    justify-content: flex-start; /* Aligns cards to the start */
-    flex-wrap: nowrap; /* Prevents wrapping of cards */
-    overflow-x: auto; /* Allows horizontal scrolling */
-    margin-bottom: 100px; /* Space at the bottom of the container */
+    gap: 10px; 
+    padding: 2px; 
+    justify-content: flex-start; 
+    flex-wrap: nowrap; 
+    overflow-x: auto;
+    margin-bottom: 100px; 
+    margin-top: 20px;
 }
 
 .card {
-    width: 250px; /* Consistent width for all cards */
-    padding: 20px; /* Adjust padding as needed */
+    width: 400px; 
+    padding: 20px; 
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15), 0px 4px 8px rgba(0, 0, 0, 0.10);
@@ -48,6 +50,7 @@
     background: linear-gradient(135deg, #133E87, #3b6db3);
     font-family: 'Poppins', sans-serif;
     transition: transform 0.3s ease;
+    margin-right:50px;
 }
 
 .card-content {
@@ -59,11 +62,12 @@
 .card h4 {
     font-weight: 600;
     font-size: 1.5em;
+    margin-right: auto;
 }
 
 .card img.icon {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
 
 .card p {
@@ -76,15 +80,15 @@
     transform: translateY(-5px);
 }
 
-/* Responsive Layout */
+
 @media (max-width: 768px) {
     .card-container {
-        flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        justify-content: center; /* Center cards on smaller screens */
+        flex-wrap: wrap; 
+        justify-content: center; 
     }
 
     .card {
-        width: 100%; /* Full width for cards on small screens */
-        margin-bottom: 10px; /* Space between cards */
+        width: 100%;
+        margin-bottom: 10px; 
     }
 }

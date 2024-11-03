@@ -3,16 +3,15 @@
     <thead>
       <tr>
         <th class="table1">No</th>
-        <th class="table2">Doctor's Name</th>
+        <th class="table2">Patient's Name</th>
         <th class="table4">Specialization</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let doctor of doctors; let i = index">
+      <tr *ngFor="let patient of patients; let i = index">
         <th scope="row">{{ i + 1 }}</th>
-        <td>{{ doctor.name }}</td>
-        <!-- <td>{{ doctor.lastName }}</td> -->
-        <td>{{ doctor.specialization }}</td>
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.specialization }}</td>
       </tr>
     </tbody>
   </table>

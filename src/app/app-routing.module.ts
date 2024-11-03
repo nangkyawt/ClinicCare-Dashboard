@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DoctorListComponent } from './doctor-list/doctor-list.component';
 import { LayoutComponent } from './layout/layout.component';
+import { PatientListComponent } from './patient-list/patient-list.component';
 
 const routes: Routes = [
   // {
@@ -21,6 +22,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'doctor-list', component: DoctorListComponent },
+      { path: 'patient-list', component: PatientListComponent },
     ],
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

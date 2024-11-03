@@ -4,7 +4,7 @@
   
   .content {
     flex-grow: 1;
-    margin-left: 250px;
+    margin-left: 160px;
     padding-top: 60px;
-    width: calc(100% - 250px);
+    width: calc(100% - 160px)
   }
