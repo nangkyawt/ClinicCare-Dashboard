@@ -35,7 +35,7 @@
     justify-content: flex-start; 
     flex-wrap: nowrap; 
     overflow-x: auto;
-    margin-bottom: 100px; 
+    margin-bottom: 30px; 
     margin-top: 20px;
 }
 
@@ -80,6 +80,120 @@
     transform: translateY(-5px);
 }
 
+/* For table styling */
+.table-doctor-container {
+    margin: 20px auto;
+    max-width: 90%;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.table {
+    font-size: 1.1rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table-doctor-container h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0056b3;
+    margin-bottom: 10px;
+    text-align: left;
+    border-bottom: 2px solid #1e8ec2;
+    padding-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.table-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-bottom: 50px;
+}
+
+.table thead th {
+    background: linear-gradient(135deg, #133E87, #3b6db3);
+    color: #ede6e6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-bottom: 3px solid #dee2e6;
+}
+
+.table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+.table td, .table th {
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+}
+
+.table th:last-child, .table td:last-child {
+    border-right: none;
+}
+
+.action-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 10px;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+/* Font Awesome Icon Styling */
+.icon {
+    font-size: 16px; 
+    
+}
+
+
+.doctor-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .table-container {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}
+  
 
 @media (max-width: 768px) {
     .card-container {

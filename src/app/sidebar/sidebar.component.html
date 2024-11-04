@@ -7,7 +7,13 @@
         alt="Dashboard Icon"
         class="sidebar-icon"
       />
-      <a routerLink="/home" routerLinkActive="active">Dashboard</a>
+      <a
+        routerLink="/home"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Dashboard
+      </a>
     </li>
     <li>
       <img
@@ -15,7 +21,9 @@
         alt="Appointments Icon"
         class="sidebar-icon"
       />
-      <a routerLink="/appoitments">Appointments</a>
+      <a routerLink="/appointments" routerLinkActive="active-link">
+        Appointments
+      </a>
     </li>
     <li>
       <img
@@ -23,7 +31,9 @@
         alt="Doctors Icon"
         class="sidebar-icon"
       />
-      <a routerLink="/home/doctor-list" routerLinkActive="active">Doctors</a>
+      <a routerLink="/home/doctor-list" routerLinkActive="active-link">
+        Doctors
+      </a>
     </li>
     <li>
       <img
@@ -31,7 +41,9 @@
         alt="Departments Icon"
         class="sidebar-icon"
       />
-      <a routerLink="/departments">Departments</a>
+      <a routerLink="/departments" routerLinkActive="active-link">
+        Departments
+      </a>
     </li>
     <li>
       <img
@@ -39,7 +51,9 @@
         alt="Patients Icon"
         class="sidebar-icon"
       />
-      <a routerLink="/home/patient-list" routerLinkActive="active">Patients</a>
+      <a routerLink="/home/patient-list" routerLinkActive="active-link">
+        Patients
+      </a>
     </li>
     <li>
       <img
@@ -47,7 +61,7 @@
         alt="Payments Icon"
         class="sidebar-icon"
       />
-      <a routerLink="/payments">Payments</a>
+      <a routerLink="/payments" routerLinkActive="active-link"> Payments </a>
     </li>
     <li>
       <img
@@ -55,7 +69,7 @@
         alt="Setting Icon"
         class="sidebar-icon"
       />
-      <a routerLink="/setting">Setting</a>
+      <a routerLink="/setting" routerLinkActive="active-link"> Setting </a>
     </li>
     <li>
       <img
@@ -63,7 +77,7 @@
         alt="Help Icon"
         class="sidebar-icon"
       />
-      <a routerLink="/help">Help</a>
+      <a routerLink="/help" routerLinkActive="active-link"> Help </a>
     </li>
   </ul>
 </div>
