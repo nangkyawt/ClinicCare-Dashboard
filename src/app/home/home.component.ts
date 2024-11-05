@@ -16,6 +16,15 @@ export class HomeComponent implements OnInit {
     { name: 'Su Su', doctor: 'Dr. Aike Khun', condition: 'Cold' },
     { name: 'Kyawt Kyawt', doctor: 'Dr. Aike Khun', condition: 'Allergy' },
   ];
+  doctors = [
+    {
+      name: 'Kaung Khant Zaw',
+      visittime: '8:00Am',
+    },
+    { name: 'Kaung Khant Zaw', visittime: '12:00Pm', experience: 'Fracture' },
+    { name: 'Aike Khun', visittime: '3:00Pm', experience: 'Cold' },
+    { name: 'Aike Khun', visittime: '10:00Am', experience: 'Allergy' },
+  ];
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 

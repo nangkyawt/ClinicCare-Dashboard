@@ -49,49 +49,73 @@
       </div>
     </div>
 
-    <div class="table-doctor-container">
-      <div class="table-card">
-        <h1>Last Appointments</h1>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th class="table1">No</th>
-              <th class="table2">Name</th>
-              <th class="table3">Doctor's Name</th>
-              <th class="table4">Condition</th>
-              <th class="table5">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let appointment of appointments; let i = index">
-              <th scope="row">{{ i + 1 }}</th>
-              <td>{{ appointment.name }}</td>
-              <td>{{ appointment.doctor }}</td>
-              <td>{{ appointment.condition }}</td>
-              <td>
-                <button class="action-button">
-                  <i class="fas fa-edit icon"></i>
-                </button>
-                <button class="action-button">
-                  <i class="fas fa-trash icon"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="tables-wrapper">
+      <!-- Last Appointments Table -->
+      <div class="table-doctor-container">
+        <div class="table-card">
+          <h1>Last Appointments</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="table1">No</th>
+                <th class="table2">Name</th>
+                <th class="table3">Doctor's Name</th>
+                <th class="table4">Condition</th>
+                <th class="table5">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let appointment of appointments; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ appointment.name }}</td>
+                <td>{{ appointment.doctor }}</td>
+                <td>{{ appointment.condition }}</td>
+                <td>
+                  <button class="action-button">
+                    <i class="fas fa-edit icon"></i>
+                  </button>
+                  <button class="action-button">
+                    <i class="fas fa-trash icon"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
 
-    <div class="card doctor-card">
-      <div class="card-content">
-        <h4>15</h4>
-        <img
-          src="../../assets/images/doctor.png"
-          alt="Doctor Visiting Icon"
-          class="icon"
-        />
+      <!-- New Doctors Table -->
+      <div class="table-visit-container">
+        <div class="table-card">
+          <h1>Doctor Visiting</h1>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="table1">No</th>
+                <th class="table3">Name</th>
+                <th class="table4">Visit time</th>
+                <th class="table5">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let doctor of doctors; let j = index">
+                <th scope="row">{{ j + 1 }}</th>
+                <td>{{ doctor.name }}</td>
+                <td>{{ doctor.visittime }}</td>
+
+                <td>
+                  <button class="action-button">
+                    <i class="fas fa-edit icon"></i>
+                  </button>
+                  <button class="action-button">
+                    <i class="fas fa-trash icon"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <p>Doctor Visiting</p>
     </div>
   </div>
 </div>
