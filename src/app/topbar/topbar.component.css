@@ -66,3 +66,15 @@
   padding-top: 60px; 
   width: calc(100% - 250px);
 }
+
+.toggle-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+
+.hidden {
+  display: none; 
+}

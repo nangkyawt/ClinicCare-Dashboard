@@ -1,6 +1,12 @@
 <div class="topbar">
+  <img
+    src="../../assets/images/interface.png"
+    alt="Toggle Menu"
+    class="toggle-icon"
+    (click)="toggleSearch()"
+  />
   <div class="center-wrapper">
-    <div class="search-container">
+    <div class="search-container" *ngIf="isSearchVisible">
       <input type="text" placeholder="Search..." class="search-input" />
       <img
         src="../../assets/images/search.png"
@@ -9,7 +15,11 @@
       />
     </div>
     <div class="user-profile">
-      <img src="../../assets/images/bell.png" alt="Noti Icon" class="noti" />
+      <img
+        src="../../assets/images/bell.png"
+        alt="Notification Icon"
+        class="noti"
+      />
       <img
         src="../../assets/images/user.png"
         alt="User Profile"
