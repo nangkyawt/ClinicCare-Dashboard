@@ -94,19 +94,20 @@
     display: flex;
     gap: 20px;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .table-doctor-container {
     margin: 20px auto;
     max-width: 90%;
-    margin-bottom: 50px;
+    /* margin-bottom: 20px; */
     text-align: center;
     margin-left: 10px;
 }
 .table-visit-container {
     margin: 20px auto;
     max-width: 90%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     margin-left: 10px;
 }

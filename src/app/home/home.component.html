@@ -1,5 +1,5 @@
 <div class="main-layout">
-  <app-sidebar></app-sidebar>
+  <app-sidebar [darkMode]="isDarkMode"></app-sidebar>
   <div class="content">
     <app-topbar></app-topbar>
     <div class="card-container">
@@ -50,7 +50,6 @@
     </div>
 
     <div class="tables-wrapper">
-      <!-- Last Appointments Table -->
       <div class="table-doctor-container">
         <div class="table-card">
           <h1>Last Appointments</h1>
@@ -83,8 +82,6 @@
           </table>
         </div>
       </div>
-
-      <!-- New Doctors Table -->
       <div class="table-visit-container">
         <div class="table-card">
           <h1>Doctor Visiting</h1>

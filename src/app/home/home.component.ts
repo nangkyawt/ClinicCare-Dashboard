@@ -26,6 +26,12 @@ export class HomeComponent implements OnInit {
     { name: 'Aike Khun', visittime: '10:00Am', experience: 'Allergy' },
   ];
 
+  isDarkMode: boolean = false;
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode; // Toggle dark mode state
+  }
+
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {

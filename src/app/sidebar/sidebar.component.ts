@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,8 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
+  isDarkMode = false;
+  sidebarItems: any;
+
+  @Input() darkMode: boolean = false;
   constructor(private router: Router) {}
   isDoctorListActive(): boolean {
     return this.router.url === '/home/doctor-list';
+  }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
   }
 }

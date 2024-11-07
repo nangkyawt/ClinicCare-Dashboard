@@ -1,5 +1,9 @@
-<div class="sidebar">
-  <h1 class="sidebar-title">Dr.Kaung Khant Zaw</h1>
+<div [ngClass]="{ sidebar: true, 'dark-mode': isDarkMode }">
+  <button (click)="toggleDarkMode()" class="dark-mode-toggle">
+    {{ isDarkMode ? "Light Mode" : "Dark Mode" }}
+  </button>
+
+  <h1 class="sidebar-title">Dr. Kaung Khant Zaw</h1>
   <ul class="sidebar-list">
     <li>
       <img
