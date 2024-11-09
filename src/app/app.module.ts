@@ -8,6 +8,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
+import { SettingComponent } from './setting/setting.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PatientListComponent } from './patient-list/patient-list.component';
     TopbarComponent,
     LayoutComponent,
     PatientListComponent,
+    SettingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -1,3 +1,18 @@
+/* for dark mode */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .dark-mode .card {
+    background-color: #1e1e1e;
+  }
+
+
+
+
+
+
 .main-layout {
     display: flex; 
 }
@@ -27,6 +42,11 @@
     font-family: 'Poppins', sans-serif;
     z-index: 1000;
 }
+
+/* .topbar.dark-mode {
+    background-color: #091d3a;
+    color: #ccc;
+  } */
 
 .card-container {
     display: flex;

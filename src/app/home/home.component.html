@@ -1,7 +1,14 @@
-<div class="main-layout">
+<div class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
   <app-sidebar [darkMode]="isDarkMode"></app-sidebar>
+
   <div class="content">
     <app-topbar></app-topbar>
+    <!-- 
+    <button (click)="toggleDarkMode()" class="dark-mode-toggle">
+      {{ isDarkMode ? "Light Mode" : "Dark Mode" }}
+    </button> -->
+
+    <!-- Card Container -->
     <div class="card-container">
       <div class="card">
         <div class="card-content">
@@ -49,6 +56,7 @@
       </div>
     </div>
 
+    <!-- Tables -->
     <div class="tables-wrapper">
       <div class="table-doctor-container">
         <div class="table-card">
@@ -56,11 +64,11 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th class="table1">No</th>
-                <th class="table2">Name</th>
-                <th class="table3">Doctor's Name</th>
-                <th class="table4">Condition</th>
-                <th class="table5">Actions</th>
+                <th>No</th>
+                <th>Name</th>
+                <th>Doctor's Name</th>
+                <th>Condition</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -82,16 +90,17 @@
           </table>
         </div>
       </div>
+
       <div class="table-visit-container">
         <div class="table-card">
           <h1>Doctor Visiting</h1>
           <table class="table table-striped">
             <thead>
               <tr>
-                <th class="table1">No</th>
-                <th class="table3">Name</th>
-                <th class="table4">Visit time</th>
-                <th class="table5">Actions</th>
+                <th>No</th>
+                <th>Name</th>
+                <th>Visit Time</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -99,7 +108,6 @@
                 <th scope="row">{{ j + 1 }}</th>
                 <td>{{ doctor.name }}</td>
                 <td>{{ doctor.visittime }}</td>
-
                 <td>
                   <button class="action-button">
                     <i class="fas fa-edit icon"></i>
