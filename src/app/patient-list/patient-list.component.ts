@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PatientListComponent {
   patients = [
-    { name: 'Mark', specialization: 'Cardiology' },
-    { name: 'Jacob', specialization: 'Pediatrics' },
-    { name: 'Larry', specialization: 'Orthopedics' },
+    { name: 'Mark', age: '30', gender: 'Male' },
+    { name: 'Jacob', age: '30', gender: 'Male' },
+    { name: 'Larry', age: '30', gender: 'Male' },
   ];
 }

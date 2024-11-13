@@ -4,14 +4,17 @@
       <tr>
         <th class="table1">No</th>
         <th class="table2">Patient's Name</th>
-        <th class="table4">Specialization</th>
+        <th class="table-3">Age</th>
+        <th class="table-4">Gender</th>
+        <th class="table-5">Contact</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let patient of patients; let i = index">
         <th scope="row">{{ i + 1 }}</th>
         <td>{{ patient.name }}</td>
-        <td>{{ patient.specialization }}</td>
+        <td>{{ patient.age }}</td>
+        <td>{{ patient.gender }}</td>
       </tr>
     </tbody>
   </table>
