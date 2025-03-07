@@ -1,5 +1,5 @@
 <div class="main-layout" [ngClass]="{ 'dark-mode': isDarkMode }">
-  <app-sidebar [darkMode]="isDarkMode"></app-sidebar>
+  <!-- <app-sidebar [darkMode]="isDarkMode"></app-sidebar> -->
 
   <div class="content">
     <app-topbar></app-topbar>
@@ -56,6 +56,7 @@
     </div>
 
     <div class="tables-wrapper">
+      <!-- Last Appointments Table -->
       <div class="table-doctor-container">
         <div class="table-card">
           <h1>Last Appointments</h1>
@@ -76,10 +77,15 @@
                 <td>{{ appointment.doctor }}</td>
                 <td>{{ appointment.condition }}</td>
                 <td>
-                  <button class="action-button">
+                  <button
+                    class="action-button"
+                    (click)="openEditModal(appointment)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editModal"
+                  >
                     <i class="fas fa-edit icon"></i>
                   </button>
-                  <button class="action-button">
+                  <button class="action-button" (click)="deleteAppointment(i)">
                     <i class="fas fa-trash icon"></i>
                   </button>
                 </td>
@@ -89,6 +95,7 @@
         </div>
       </div>
 
+      <!-- Doctor Visiting Table -->
       <div class="table-visit-container">
         <div class="table-card">
           <h1>Doctor Visiting</h1>
@@ -107,10 +114,15 @@
                 <td>{{ doctor.name }}</td>
                 <td>{{ doctor.visittime }}</td>
                 <td>
-                  <button class="action-button">
+                  <button
+                    class="action-button"
+                    (click)="openEditModal(doctor)"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editModal"
+                  >
                     <i class="fas fa-edit icon"></i>
                   </button>
-                  <button class="action-button">
+                  <button class="action-button" (click)="deleteDoctor(j)">
                     <i class="fas fa-trash icon"></i>
                   </button>
                 </td>
@@ -120,5 +132,246 @@
         </div>
       </div>
     </div>
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      aria-labelledby="editModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">
+              {{
+                selectedAppointment.name
+                  ? "Edit Last Appointment"
+                  : "Edit Doctor Visit"
+              }}
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form (ngSubmit)="saveChanges()">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  [(ngModel)]="selectedAppointment.name"
+                  name="name"
+                />
+              </div>
+
+              <div *ngIf="selectedAppointment.condition" class="mb-3">
+                <label for="doctor" class="form-label">Doctor</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="doctor"
+                  [(ngModel)]="selectedAppointment.doctor"
+                  name="doctor"
+                />
+              </div>
+
+              <div *ngIf="selectedAppointment.condition" class="mb-3">
+                <label for="condition" class="form-label">Condition</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="condition"
+                  [(ngModel)]="selectedAppointment.condition"
+                  name="condition"
+                />
+              </div>
+
+              <div *ngIf="!selectedAppointment.condition" class="mb-3">
+                <label for="visittime" class="form-label">Visit Time</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="visittime"
+                  [(ngModel)]="selectedAppointment.visittime"
+                  name="visittime"
+                />
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button
+                  type="submit"
+                  class="btn text-white"
+                  style="background-color: #0056b3"
+                >
+                  Save Changes
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Edit form -->
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      aria-labelledby="editModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">
+              Edit Last Apointment
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form (ngSubmit)="saveChanges()">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  [(ngModel)]="selectedAppointment.name"
+                  name="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="doctor" class="form-label">Doctor</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="doctor"
+                  [(ngModel)]="selectedAppointment.doctor"
+                  name="doctor"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="condition" class="form-label">Condition</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="condition"
+                  [(ngModel)]="selectedAppointment.condition"
+                  name="condition"
+                />
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button
+                  type="submit"
+                  class="btn text-white"
+                  style="background-color: #0056b3"
+                >
+                  Save Changes
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="editModal_dv"
+      tabindex="-1"
+      aria-labelledby="editModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">
+              Edit Doctor Visiting
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form (ngSubmit)="saveChanges()">
+              <div class="mb-3">
+                <label for="doctor" class="form-label">ID:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="doctor"
+                  [(ngModel)]="selectedAppointment.id"
+                  name="doctor"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  [(ngModel)]="selectedAppointment.name"
+                  name="name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="doctor" class="form-label">Visit Time</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="doctor"
+                  [(ngModel)]="selectedAppointment.visittime"
+                  name="doctor"
+                />
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button
+                  type="submit"
+                  class="btn text-white"
+                  style="background-color: #0056b3"
+                >
+                  Save Changes
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
   </div>
 </div>

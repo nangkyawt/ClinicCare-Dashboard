@@ -11,6 +11,7 @@ export class SidebarComponent implements OnInit {
   sidebarItems: any;
 
   @Input() darkMode: boolean = false;
+  darkModeService: any;
   constructor(private router: Router) {}
 
   ngOnInit() {
@@ -21,9 +22,24 @@ export class SidebarComponent implements OnInit {
   }
 
   toggleDarkMode() {
+    console.log(this.isDarkMode);
     this.isDarkMode = !this.isDarkMode;
-    // Save to local storage
+    console.log('DARKMODE WORK');
     localStorage.setItem('isDarkMode', this.isDarkMode.toString());
     document.body.classList.toggle('dark-mode', this.isDarkMode);
   }
+
+  // ngOnInit(): void {
+  //   // Subscribe to dark mode state from the DarkModeService
+  //   this.darkModeService.darkMode$.subscribe((mode: boolean) => {
+  //     this.isDarkMode = mode;
+  //     document.body.classList.toggle('dark-mode', this.isDarkMode);
+  //   });
+  // }
+
+  // toggleDarkMode() {
+  //   console.log('darkmode work');
+  //   this.darkModeService.toggleDarkMode();
+  //   console.log(this.darkModeService); // Call the corrected method name
+  // }
 }

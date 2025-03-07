@@ -8,3 +8,18 @@
     padding-top: 60px;
     width: calc(100% - 160px)
   }
+
+  .dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .dark-mode .content {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }

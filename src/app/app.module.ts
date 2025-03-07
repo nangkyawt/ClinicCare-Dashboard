@@ -9,6 +9,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { SettingComponent } from './setting/setting.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { SettingComponent } from './setting/setting.component';
     PatientListComponent,
     SettingComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -54,38 +54,6 @@
 }
 
 /* Dark Mode Styles */
-.sidebar.dark-mode {
-  background-color: #091d3a;
-  color: #ccc;
-}
-
-.sidebar.dark-mode .sidebar-list a {
-  color: #ccc;
-}
-
-.sidebar.dark-mode .sidebar-list a:hover {
-  background-color: #444;
-}
-
-.sidebar.dark-mode .sidebar-title {
-  color: #eee;
-}
-
-/* Dark Mode Toggle Button */
-/* .dark-mode-toggle {
-  margin: 10px 20px;
-  padding: 5px 10px;
-  background-color: #091d3a;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.dark-mode-toggle:hover {
-  background-color: #091d3a;
-} */
-
 .dark-mode-toggle {
   padding: 8px 16px;
   cursor: pointer;
@@ -97,7 +65,20 @@
   margin-right: 8px; /* Adds spacing between icon and text */
 }
 
-body.dark-mode {
-  background-color: #121212;
+/* body.dark-mode {
+  background-color:  #091d3a;
   color: #ffffff;
+} */
+
+/* .dark-mode {
+  background-color: #333;
+  color: #fff;
+} */
+
+.sidebar.dark-mode {
+  background-color:  #091d3a;
 }
+
+/* .content.dark-mode {
+  background-color: #444;
+} */
