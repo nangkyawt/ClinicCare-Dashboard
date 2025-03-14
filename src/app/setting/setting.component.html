@@ -1,8 +1,166 @@
-<!-- <div class="settings">
-    <h2>Settings</h2>
-    <label class="switch">
-      <input type="checkbox" [checked]="isDarkMode" (change)="toggleDarkMode()" />
-      <span class="slider round"></span>
-    </label>
-    <span>Enable Dark Mode</span>
-  </div> -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar Section -->
+    <div class="col-md-3">
+      <div class="settings-sidebar">
+        <ul class="settings-menu">
+          <li><a href="#profile" (click)="selectTab('profile')">Profile</a></li>
+          <li>
+            <a href="#password" (click)="selectTab('password')">Password</a>
+          </li>
+          <li>
+            <a href="#notifications" (click)="selectTab('notifications')"
+              >Notifications</a
+            >
+          </li>
+          <li><a href="#privacy" (click)="selectTab('privacy')">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="col-md-9">
+      <div class="settings-content">
+        <!-- Profile Settings -->
+        <div
+          *ngIf="selectedTab === 'profile'"
+          id="profile"
+          class="settings-section"
+        >
+          <h3>Profile Settings</h3>
+          <form (ngSubmit)="saveProfileSettings()">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                [(ngModel)]="profile.name"
+                name="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                [(ngModel)]="profile.email"
+                name="email"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Password Settings -->
+        <div
+          *ngIf="selectedTab === 'password'"
+          id="password"
+          class="settings-section"
+        >
+          <h3>Change Password</h3>
+          <form (ngSubmit)="changePassword()">
+            <div class="form-group">
+              <label for="oldPassword">Old Password</label>
+              <input
+                type="password"
+                id="oldPassword"
+                class="form-control"
+                [(ngModel)]="password.oldPassword"
+                name="oldPassword"
+              />
+            </div>
+            <div class="form-group">
+              <label for="newPassword">New Password</label>
+              <input
+                type="password"
+                id="newPassword"
+                class="form-control"
+                [(ngModel)]="password.newPassword"
+                name="newPassword"
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                class="form-control"
+                [(ngModel)]="password.confirmPassword"
+                name="confirmPassword"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Notifications Settings -->
+        <div
+          *ngIf="selectedTab === 'notifications'"
+          id="notifications"
+          class="settings-section"
+        >
+          <h3>Notification Settings</h3>
+          <form (ngSubmit)="saveNotificationSettings()">
+            <div class="form-group">
+              <label for="emailNotifications">Email Notifications</label>
+              <input
+                type="checkbox"
+                id="emailNotifications"
+                [(ngModel)]="notifications.email"
+                name="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="smsNotifications">SMS Notifications</label>
+              <input
+                type="checkbox"
+                id="smsNotifications"
+                [(ngModel)]="notifications.sms"
+                name="sms"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+        </div>
+
+        <!-- Privacy Settings -->
+        <div
+          *ngIf="selectedTab === 'privacy'"
+          id="privacy"
+          class="settings-section"
+        >
+          <h3>Privacy Settings</h3>
+          <form (ngSubmit)="savePrivacySettings()">
+            <div class="form-group">
+              <label for="accountVisibility">Account Visibility</label>
+              <select
+                id="accountVisibility"
+                class="form-control"
+                [(ngModel)]="privacy.accountVisibility"
+                name="accountVisibility"
+              >
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+                <option value="friendsOnly">Friends Only</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="twoFactorAuthentication"
+                >Enable Two-Factor Authentication</label
+              >
+              <input
+                type="checkbox"
+                id="twoFactorAuthentication"
+                [(ngModel)]="privacy.twoFactor"
+                name="twoFactor"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

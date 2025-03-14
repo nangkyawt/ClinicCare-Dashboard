@@ -1,0 +1,69 @@
+/* Sidebar Styles */
+.settings-sidebar {
+    background-color: #2a3d66;
+    color: white;
+    padding: 20px;
+  }
+  
+  .settings-menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .settings-menu li {
+    margin: 10px 0;
+  }
+  
+  .settings-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .settings-menu li a:hover {
+    color: #1abc9c;
+  }
+  
+  /* Main Content Styles */
+  .settings-content {
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .settings-section {
+    display: none;
+  }
+  
+  .settings-section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #1662cc;
+    border-color: #1662cc;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #154f94;
+  }
+  
