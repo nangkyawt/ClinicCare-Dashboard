@@ -59,10 +59,11 @@ export class HomeComponent implements OnInit {
   }
 
   openEditModal(item: any) {
-    console.log(this.selectedAppointment);
+    console.log('Selected Appointment:', this.selectedAppointment); // Debugging
     this.selectedAppointment = { ...item };
     const modal = new bootstrap.Modal(this.editModal.nativeElement);
-    console.log(this.editModal.nativeElement);
+    console.log('Selected Appointment:', this.selectedAppointment.condition); // Debugging
+    // console.log(this.editModal.nativeElement);
     modal.show();
   }
 
