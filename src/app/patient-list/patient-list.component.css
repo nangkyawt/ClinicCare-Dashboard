@@ -1,61 +1,103 @@
+/* Table container */
 .table-container {
     margin: 20px auto;
-    max-width: 100%;
-    margin-bottom: 50px;
+    max-width: 90%;
     text-align: center;
-    margin-left: 100px;
+    margin-right: 70px;
 }
+
+.table-card {
+    overflow-x: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    margin-left: 50px;
+}
+
+
+/* Table styling */
 .table {
-    font-size: 1.25rem; 
-    width: 100%; 
+    font-size: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.table1 {
-    width: 5%;
-    background-color:  #1e8ec2;
-    color:  #ede6e6;
-    border-right: 1px solid white; 
-  }
-  .table2 {
-    background-color:  #1e8ec2;
-    color:  #ede6e6;
-  
-    border-right: 1px solid white; 
-  }
-  .table3 {
-    background-color: #1e8ec2;
-    color: #ede6e6;
-    width: 10%;
-    border-right: 1px solid white; 
-  }
-
-.table th {
+/* Header row styles */
+.table thead th {
     background-color: #0056b3;
     color: #ffffff;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     font-family: 'Poppins', sans-serif;
     border-right: 1px solid white;
 }
 
-.table td, .table th {
-    vertical-align: middle;
-    padding: 14px; 
-    font-family: 'Poppins', sans-serif;
-}
+/* Specific column widths */
+.table1 { width: 5%; background-color: #0056b3; color: white; }
+.table2 { width: 20%; background-color: #0056b3; color: white; }
+.table3 { width: 10%; background-color: #0056b3; color: white; }
+.table4 { width: 10%; background-color: #0056b3; color: white; }
+.table5 { width: 20%; background-color: #0056b3; color: white; }
+.table6 { width: 15%; background-color: #0056b3; color: white; }
 
-
+/* Table body styling */
 .table tbody tr:hover {
-    background-color: #e9f3ff; 
+    background-color: #e9f3ff;
 }
-
 
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa;
 }
 
-.table thead th {
-    border-bottom: 2px solid #dee2e6;
+.table th, .table td {
+    padding: 14px;
+    vertical-align: middle;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
 }
 
-  
+/* Action Buttons */
+.action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 6px;
+    transition: 0.3s;
+}
+
+.action-button:hover {
+    background: rgba(0, 86, 179, 0.1);
+    border-radius: 4px;
+}
+
+/* Icons inside buttons */
+.icon {
+    font-size: 1.2rem;
+    color: #0056b3;
+}
+
+/* Delete button icon in red */
+.action-button:nth-child(2) .icon {
+    color: #d9534f;
+}
+
+.action-button:nth-child(2):hover {
+    background: rgba(217, 83, 79, 0.1);
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.9rem;
+    }
+    .table1, .table2, .table3, .table4, .table5, .table6 {
+        width: auto;
+    }
+}

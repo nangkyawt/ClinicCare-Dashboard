@@ -5,6 +5,7 @@ import { DoctorListComponent } from './doctor-list/doctor-list.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { SettingComponent } from './setting/setting.component';
+import { AppointmentComponent } from './appointment/appointment.component';
 
 const routes: Routes = [
   // {
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'doctor-list', component: DoctorListComponent },
       { path: 'patient-list', component: PatientListComponent },
       { path: 'setting', component: SettingComponent },
+      { path: 'appointment', component: AppointmentComponent },
     ],
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

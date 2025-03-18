@@ -10,6 +10,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { SettingComponent } from './setting/setting.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppointmentComponent } from './appointment/appointment.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LayoutComponent,
     PatientListComponent,
     SettingComponent,
+    AppointmentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

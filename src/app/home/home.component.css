@@ -209,7 +209,7 @@
     border-right: none;
 }
 
-.action-button {
+/* .action-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -231,8 +231,23 @@
 .icon {
     font-size: 16px; 
     
+} */
+
+
+.icon {
+    font-size: 1.2rem;
+    color: #0056b3;
+    margin-right: 5px;
 }
 
+/* Delete button icon in red */
+.action-button:nth-child(2) .icon {
+    color: #d9534f;
+}
+
+.action-button:nth-child(2):hover {
+    background: rgba(217, 83, 79, 0.1);
+} */
 
 .doctor-card p {
     font-size: 1rem;

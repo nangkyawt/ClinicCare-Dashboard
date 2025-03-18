@@ -1,21 +1,38 @@
 <div class="table-container">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th class="table1">No</th>
-        <th class="table2">Patient's Name</th>
-        <th class="table-3">Age</th>
-        <th class="table-4">Gender</th>
-        <th class="table-5">Contact</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let patient of patients; let i = index">
-        <th scope="row">{{ i + 1 }}</th>
-        <td>{{ patient.name }}</td>
-        <td>{{ patient.age }}</td>
-        <td>{{ patient.gender }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-card">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th class="table1">No</th>
+          <th class="table2">Patient's Name</th>
+          <th class="table3">Age</th>
+          <th class="table4">Gender</th>
+          <th class="table5">Contact</th>
+          <th class="table6">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let patient of patients; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ patient.name }}</td>
+          <td>{{ patient.age }}</td>
+          <td>{{ patient.gender }}</td>
+          <td>{{ patient.contact }}</td>
+          <td>
+            <button
+              class="action-button"
+              (click)="openEditModal(patient)"
+              data-bs-toggle="modal"
+              data-bs-target="#editModal"
+            >
+              <i class="fas fa-edit icon"></i>
+            </button>
+            <button class="action-button" (click)="deletePatient(i)">
+              <i class="fas fa-trash icon"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

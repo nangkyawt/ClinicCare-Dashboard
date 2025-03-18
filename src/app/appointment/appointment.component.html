@@ -1,0 +1,109 @@
+<div class="table-doctor-container">
+  <!-- Button to trigger the 'Add New Appointment' modal -->
+  <button
+    class="add-appointment-button"
+    (click)="openAddModal()"
+    data-bs-toggle="modal"
+    data-bs-target="#addModal"
+  >
+    <i class="fas fa-plus"></i>
+    Add New Appointment
+  </button>
+
+  <div class="table-card">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Doctor's Name</th>
+          <th>Condition</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of appointments; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ appointment.name }}</td>
+          <td>{{ appointment.doctor }}</td>
+          <td>{{ appointment.condition }}</td>
+          <td>
+            <button
+              class="action-button"
+              (click)="openEditModal(appointment)"
+              data-bs-toggle="modal"
+              data-bs-target="#editModal"
+            >
+              <i class="fas fa-edit icon"></i>
+            </button>
+            <button class="action-button" (click)="deleteAppointment(i)">
+              <i class="fas fa-trash icon"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal for adding a new appointment -->
+<div
+  class="modal fade"
+  id="addModal"
+  tabindex="-1"
+  aria-labelledby="addModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addModalLabel">Add New Appointment</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form to add a new appointment -->
+        <form (ngSubmit)="Addappointment()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Patient's Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              [(ngModel)]="newAppointment.name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="doctor" class="form-label">Doctor's Name</label>
+            <input
+              type="text"
+              id="doctor"
+              class="form-control"
+              [(ngModel)]="newAppointment.doctor"
+              name="doctor"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="condition" class="form-label">Condition</label>
+            <input
+              type="text"
+              id="condition"
+              class="form-control"
+              [(ngModel)]="newAppointment.condition"
+              name="condition"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Add Appointment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

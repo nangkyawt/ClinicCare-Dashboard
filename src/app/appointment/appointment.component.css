@@ -78,9 +78,35 @@
     color: #d9534f;
 }
 
-.action-button:nth-child(2):hover {
-    background: rgba(217, 83, 79, 0.1);
-}
+.add-appointment-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 8px; /* Spacing between icon and text */
+  }
+  
+  .add-appointment-button i {
+    font-size: 18px; /* Adjust icon size */
+  }
+  
+  .add-appointment-button:hover {
+    background-color: #004494;
+    transform: scale(1.05);
+  }
+  
+  .add-appointment-button:active {
+    background-color: #003377;
+    transform: scale(0.95);
+  }
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
